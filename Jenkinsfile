@@ -1,6 +1,6 @@
 @Library('mySharedLibrary') _
 
 myTestPipeline {
-    forname = 'Tony'
+    forename = 'Tony'
     surname = 'Hall'
  }
