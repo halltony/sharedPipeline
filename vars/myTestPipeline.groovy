@@ -11,7 +11,7 @@ def call(body) {
                 steps {
                     echo pipelineParams.forename
                     echo pipelineParams.surname
-                    // sh(libraryResource('helloWorld.sh') "${pipelineParams.forename} ${pipelineParams.surname}")
+                    sh "/bin bash ${(libraryResource('helloWorld.sh'}"
                 }
             }
         }
