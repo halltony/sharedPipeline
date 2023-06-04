@@ -1,6 +1,5 @@
+/* groovylint-disable CompileStatic */
+/* groovylint-disable-next-line NoDef, UnusedVariable, VariableName, VariableTypeRequired */
 @Library('mySharedLibrary') _
 
-myTestPipeline {
-    forename = 'Tony'
-    surname = 'Hall'
- }
+myTestPipeline { }
