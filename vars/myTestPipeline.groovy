@@ -9,8 +9,6 @@ def call(body) {
         stages {
             stage('Hello') {
                 steps {
-                    echo pipelineParams.forename
-                    echo pipelineParams.surname
                     sh "${libraryResource('helloWorld.sh')} ${pipelineParams.forename} ${pipelineParams.surname}"
                 }
             }
