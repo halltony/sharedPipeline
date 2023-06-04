@@ -5,7 +5,7 @@ def call(Map pipelineParams) {
         stages {
             stage('Hello') {
                 steps {
-                    echo 'Hello World'
+                    sh(libraryResource('helloWorld.sh'))
                 }
             }
         }
