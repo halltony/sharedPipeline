@@ -9,7 +9,7 @@ def call(body) {
         stages {
             stage('Hello') {
                 steps {
-                    sh("${libraryResource('helloWorld.sh'} ${pipelineParams.forename} ${pipelineParams.surname}))
+                    sh(libraryResource('helloWorld.sh' ${pipelineParams.forename} ${pipelineParams.surname}))
                 }
             }
         }
