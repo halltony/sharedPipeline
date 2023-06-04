@@ -1,6 +1,6 @@
 @Library('mySharedLibrary') _
 
-def string env = 'dev'
+def String env = 'dev'
 def props = readJSON file: 'config.json'
 
 assert props["forename"[env]] == 'Tony'
