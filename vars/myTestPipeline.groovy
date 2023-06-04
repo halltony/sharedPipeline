@@ -1,6 +1,6 @@
 def call(body) {
     // evaluate the body block, and collect configuration into the object
-    def pipelineParams= [:]
+    def pipelineParams = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = pipelineParams
     body()
@@ -9,7 +9,9 @@ def call(body) {
         stages {
             stage('Hello') {
                 steps {
-                    sh(libraryResource('helloWorld.sh') pipelineParams.forename pipelineParams.surname)
+                    echo pipelineParams.forename
+                    echo pipelineParams.surname
+                    // sh(libraryResource('helloWorld.sh') "${pipelineParams.forename} ${pipelineParams.surname}")
                 }
             }
         }
